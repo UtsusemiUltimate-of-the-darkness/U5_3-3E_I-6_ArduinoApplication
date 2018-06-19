@@ -8,6 +8,6 @@
 
 
 <h3>バージョン情報</h3>
-<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.0">ver_1.0.0</h4>
+<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.0">ver_1.0.0</a></h4>
 実験前の予習．「たぶん動くだろう」という恐ろしい考えでテキトーに描きました．<br>
 ファイル内のex1〜problem5までは動作確認済み．
