@@ -14,4 +14,4 @@
 <br>
 <h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.1">ver_1.0.1</a></h4>
 「.DS_store」削除版です．<br>
-動作には全く影響ございません．
+その他中身は変わりありません．
