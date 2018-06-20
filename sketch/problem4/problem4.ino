@@ -38,9 +38,9 @@ void loop () {
     if ( inputTime != -1 ) {
 
         // 1-9秒の範囲であるか
-        if ( 0 <= (inputTime - 0x30) || (inputTime - 0x30) <= 9 ) {
+        if ( 0 <= (inputTime - 0x30) && (inputTime - 0x30) <= 9 ) {
             // 表示
-            Serial.print ( (inputTime - 0x30) );
+            Serial.print ( ( inputTime - 0x30 ) );
             Serial.println ( " 秒待機");
 
             delay ( (inputTime - 0x30) * 1000 );  // 入力された時間待機[sec]
