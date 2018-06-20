@@ -17,4 +17,4 @@
 その他中身は変わりありません．<br>
 
 <h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.0.0">ver_2.0.0</a></h4>
-「problemAddEx6_LCD」，「vr_R」以外動作確認済み．<br>
+「problemAddEx6_LCD」，「problemAddEx6_decCounter」，「vr_R」以外動作確認済み．<br>

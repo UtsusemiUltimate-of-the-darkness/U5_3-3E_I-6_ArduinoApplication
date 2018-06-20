@@ -14,11 +14,10 @@ void setup () {
     // put your setup code here, to run once:
 
     // ピンのモード設定
-    pinMode ( LED, OUTPUT );
+    pinMode ( LED, OUTPUT );  // 出力モード
 
-    Serial.begin ( 9600 );
+    Serial.begin ( 9600 );    // シリアルモニタ初期化
 }
-
 
 /**
  * 関数名: loop
@@ -30,11 +29,11 @@ void loop () {
     // put your main code here, to run repeatedly:
 
     int val = analogRead ( CdS );  // A/D変換値
-    Serial.print ( "val: ");
-    Serial.println ( val );
+    Serial.print ( "val: ");       // 改行しない
+    Serial.println ( val );        // 改行する
 
-    digitalWrite ( LED, HIGH );   // LED点灯
-    delay ( val );                // A/D変換値[ms]遅延
-    digitalWrite ( LED, LOW );    // LED消灯
-    delay ( val );                // A/D変換値[ms]遅延
+    digitalWrite ( LED, HIGH );    // LED点灯
+    delay ( val );                 // A/D変換値[ms]遅延
+    digitalWrite ( LED, LOW );     // LED消灯
+    delay ( val );                 // A/D変換値[ms]遅延
 }

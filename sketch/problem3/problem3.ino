@@ -16,12 +16,12 @@
 void setup () {
     // put your setup code here, to run once:
 
-    pinMode ( BZ, OUTPUT );  // 圧電スピーカー接続ピン
-    Serial.begin ( 9600 );   // シリアル通信の初期化
+    pinMode ( BZ, OUTPUT );                       // 圧電スピーカー接続ピン
+    Serial.begin ( 9600 );                        // シリアル通信の初期化
 
     // 再生内容を表示
-    Serial.println ( "救急車のサイレン" );           // 最後開業あり
-    Serial.println ( "pii: 960Hz, poo: 770Hz" );  // 最後開業あり
+    Serial.println ( "救急車のサイレン" );           // 最後改行あり
+    Serial.println ( "pii: 960Hz, poo: 770Hz" );  // 最後改行あり
 }
 
 int time_ms = 600;  // 音を鳴らす時間[ms]
@@ -34,9 +34,7 @@ int time_ms = 600;  // 音を鳴らす時間[ms]
  */
 void loop () {
     // put your main code here, to run repeatedly:
-    /**
-     * tone関数は3, 11番ピンの出力を妨げる
-     */
+    //tone関数は3, 11番ピンの出力を妨げる
 
     // サイレン鳴らす
     tone ( BZ, Pii, time_ms );  // 音再生

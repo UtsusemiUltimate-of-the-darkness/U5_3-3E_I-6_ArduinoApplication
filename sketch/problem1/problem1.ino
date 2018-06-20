@@ -30,7 +30,7 @@ void loop () {
 
     int inputChar = Serial.read ();  // シリアルモニタからの入力を読み取り
 
-    // バッファのデータサイズが-1でない場合
+    // データが受信できた場合
     if ( inputChar != -1 ) {
 
         // 入力された文字によりLEDの点灯を切り替え
@@ -55,16 +55,16 @@ void loop () {
             case 'R':
             case 'r':
                 Serial.println ( "countReset" );   // 表示(最後の文字の後に改行)
-                digitalWrite ( LED, HIGH );
-                delay ( 800 );
-                digitalWrite ( LED, LOW );
+                digitalWrite ( LED, HIGH );        // LED点灯
+                delay ( 800 );                     // LED点灯している時間[ms]
+                digitalWrite ( LED, LOW );         // LED消灯
                 count = 0;                         // カウントリセット
                 break;                             // Switch文終了
 
             // 上記以外
             default:
                 Serial.println ( "not command" );  // 表示
-                break;  // Switch文終了
+                break;                             // Switch文終了
         }
     }
 }

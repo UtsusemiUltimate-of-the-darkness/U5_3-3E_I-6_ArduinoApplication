@@ -1,7 +1,7 @@
 // 例題3: CdSにかかる電圧によってLEDの明るさ変化
 
 // defineはコンパイル時にマクロ変換される
-#define LED 9  // LED接続ピン
+#define LED 9   // LED接続ピン
 #define CdS 0   // CdS接続ピン(アナログ)
 
 /**
@@ -14,9 +14,9 @@ void setup () {
     // put your setup code here, to run once:
 
     // ピンのモード設定
-    pinMode ( LED, OUTPUT );
+    pinMode ( LED, OUTPUT );  // 出力モード
 
-    Serial.begin ( 9600 );
+    Serial.begin ( 9600 );    // シリアルモニタ初期化
 }
 
 /**
@@ -29,8 +29,11 @@ void loop () {
     // put your main code here, to run repeatedly:
 
     int val = analogRead ( CdS );  // A/D変換値
-    Serial.print ( "val: " );
-    Serial.println ( val );
+
+    // 表示
+    Serial.print ( "val: " );      // 改行しない
+    Serial.println ( val );        // 改行する
+
     analogWrite ( LED, val / 4 );  // A/D変換値の大きさに基づいてLED点灯
 
     delay ( 10 );                  // 遅延[ms]

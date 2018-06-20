@@ -17,11 +17,10 @@ void setup () {
 
     // 各ピン出力モード設定
     for ( int i = 8; i < 11; i++ ) {
-        pinMode ( i, OUTPUT );  // 出力に設定
-        digitalWrite ( i, HIGH );  // 出力オフ
+        pinMode ( i, OUTPUT );     // 出力に設定
+        digitalWrite ( i, HIGH );  // LED消灯
     }
-    Serial.begin ( 9600 );      // シリアル通信の初期化
-    Serial.println( "set..." );
+    Serial.begin ( 9600 );         // シリアル通信の初期化
 }
 
 // LED点灯フラグ
@@ -40,7 +39,7 @@ void loop () {
 
     int inputChar = Serial.read ();  // シリアルモニタからの入力を読み取り
 
-    // バッファのデータサイズが-1でない場合
+    // データを受信できた場合
     if ( inputChar != -1 ) {
 
         // 入力された文字を判定
@@ -52,11 +51,11 @@ void loop () {
 
                 // LEDが点灯しているか
                 if ( flagR ) {
-                    Serial.println ( "Red: ON" );    // 表示(最後の文字の後に改行)
+                    Serial.println ( "Red: ON" );     // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_R, LOW );      // LED消灯
                     flagR = 0;                        // 点灯フラグを下ろす
                 } else {
-                    Serial.println ( "Red: OFF" );     // 表示(最後の文字の後に改行)
+                    Serial.println ( "Red: OFF" );    // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_R, HIGH );     // LED点灯
                     flagR = 1;                        // 点灯フラグを立てる
                 }
@@ -68,11 +67,11 @@ void loop () {
 
                 // LEDが点灯しているか
                 if ( flagG ) {
-                    Serial.println ( "Green: ON" );  // 表示(最後の文字の後に改行)
+                    Serial.println ( "Green: ON" );   // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_G, LOW );      // LED消灯
                     flagG = 0;                        // 点灯フラグを下ろす
                 } else {
-                    Serial.println ( "Green: OFF" );   // 表示(最後の文字の後に改行)
+                    Serial.println ( "Green: OFF" );  // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_G, HIGH );     // LED点灯
                     flagG = 1;                        // 点灯フラグを立てる
                 }
@@ -84,11 +83,11 @@ void loop () {
 
                 // LEDが点灯しているか
                 if ( flagB ) {
-                    Serial.println ( "Blau: ON" );   // 表示(最後の文字の後に改行)
+                    Serial.println ( "Blau: ON" );    // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_B, LOW );      // LED消灯
                     flagB = 0;                        // 点灯フラグを下ろす
                 } else {
-                    Serial.println ( "Blau: OFF" );    // 表示(最後の文字の後に改行)
+                    Serial.println ( "Blau: OFF" );   // 表示(最後の文字の後に改行)
                     digitalWrite ( LED_B, HIGH );     // LED点灯
                     flagB = 1;                        // 点灯フラグを立てる
                 }
@@ -96,9 +95,8 @@ void loop () {
 
             // 上記以外
             default:
-                // 表示
-                Serial.println ( "not command" );
-                break;  // Switch文終了
+                Serial.println ( "not command" );     // 表示
+                break;                                // Switch文終了
         }
     }
 }

@@ -28,7 +28,7 @@ void loop () {
 
     int inputChar = Serial.read ();  // シリアルモニタからの入力を読み取り
 
-    // バッファのデータサイズが-1でない場合
+    // データを受信できた場合
     if ( inputChar != -1 ) {
 
         // 入力された文字によりLEDの点灯を切り替え
@@ -50,7 +50,7 @@ void loop () {
             // 上記以外
             default:
                 Serial.println ( "not command" );  // 表示
-                break;  // Switch文終了
+                break;                             // Switch文終了
         }
     }
 }

@@ -1,6 +1,6 @@
 /**
  * 演習問題8: サーボモータと測距センサ使用．距離に応じてサーボモーターの回転角を変える
- * 測距センサ: 10-80cmまで検出, サーボモータは距離[cm]の2倍の角度で回転
+ * 距離センサ: 10-80cmまで検出, サーボモータは距離[cm]の2倍の角度で回転
  */
 
 #include <Servo.h>  // サーボモータ用ライブラリ
@@ -40,20 +40,24 @@ void loop () {
     for ( int i = 0; i < count; i++ ) {
         ain += analogRead ( SH_2Y0A21 );
     }
-    ain = ain / count;                       // 距離の平均
+    ain = ain / count;                       // A/D変換値の平均
     float dcm = ( 6787 / ( ain - 3 ) ) - 4;  // A/D変換値平均から距離に直す[cm]
 
     // 距離の表示
-    Serial.print ( "d: " );
-    Serial.print ( dcm );
-    Serial.print ( " cm " );
-    if ( 10 <= dcm || dcm < 80 ) {
+    Serial.print ( "d: " );                  // 改行しない
+    Serial.print ( dcm );                    // 改行しない
+    Serial.print ( " cm " );                 // 改行しない
+
+    //
+    if ( 10 <= dcm && dcm < 80 ) {
+
         // 回転角の表示
-        Serial.print ( ", rot: ");
-        Serial.print ( 2 * dcm );
-        Serial.println ( " deg" );
+        Serial.print ( ", rot: ");           // 改行しない
+        Serial.print ( 2 * dcm );            // 改行しない
+        Serial.println ( " deg" );           // 改行する
 
         servo1.write ( 2 * dcm );            // サーボモーター2倍の距離[cm]度に回転[deg]
     }
+
     delay ( 2000 );                          // 遅延[ms]
 }
