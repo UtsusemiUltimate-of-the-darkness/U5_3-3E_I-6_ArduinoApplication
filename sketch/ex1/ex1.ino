@@ -28,7 +28,7 @@ void setup () {
  */
 void loop () {
     // put your main code here, to run repeatedly:
-
+    Serial.println ( digitalRead ( CdS ) );
     // CdSのにかかる電圧が2.5V以上であるか
     if ( digitalRead ( CdS ) ) {
         digitalWrite ( LED, HIGH );  // LED点灯

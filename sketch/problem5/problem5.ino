@@ -17,7 +17,7 @@ void setup () {
     pinMode ( BZ, OUTPUT );  // 圧電スピーカー接続ピン
     Serial.begin ( 9600 );   // シリアル通信の初期化
 
-    Serial.println("チャルメラ");  // 表示
+    Serial.println( "チャルメラ" );  // 表示
 }
 
 /**
@@ -28,32 +28,133 @@ void setup () {
  */
 void loop () {
     // put your main code here, to run repeatedly:
+    doremiSong ();
+    delay (3000);
+}
+
+/**
+ * 関数名: tyarumera
+ * 引数: なし
+ * 処理: チャルメラの音楽を流す
+ * 返り血: なし
+ */
+void tyarumera () {
+    int shortTone = 300;
+    int longTone = 800;
     /**
      * tone関数は3, 11番ピンの出力を妨げる
      */
 
     // 同メロディ2回
-    for (int i = 0; i < 2; i++) {
-        tone (BZ, scale2f ( "do" ), 500);
+    for ( int i = 0; i < 2; i++ ) {
+        tone ( BZ, scale2f ( "do" ), 500 );
         delay ( 500 );
-        tone (BZ, scale2f ( "re" ), 300);
-        delay ( 300 );
-        tone (BZ, scale2f ( "mi" ), 1000);
+        tone ( BZ, scale2f ( "re" ), shortTone );
+        delay ( shortTone );
+        tone ( BZ, scale2f ( "mi" ), 1000 );
         delay ( 1000 );
-        tone (BZ, scale2f ( "re" ), 300);
-        delay ( 300 );
-        tone (BZ, scale2f ( "do" ), 500);
+        tone (BZ, scale2f ( "re" ), shortTone );
+        delay ( shortTone );
+        tone ( BZ, scale2f ( "do" ), 500 );
         delay ( 1000 );
     }
     // 最後
-    tone (BZ, scale2f ( "do" ), 500);
+    tone ( BZ, scale2f ( "do" ), 500 );
     delay ( 500 );
-    tone (BZ, scale2f ( "re" ), 300);
-    delay ( 300 );
-    tone (BZ, scale2f ( "mi" ), 500);
+    tone ( BZ, scale2f ( "re" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), 500 );
     delay ( 500 );
-    tone (BZ, scale2f ( "re" ), 1500);
-    delay (3000);
+    tone ( BZ, scale2f ( "re" ), 1500 );
+//    delay (0);
+}
+
+/**
+ * 関数名: doremiSong
+ * 引数: なし
+ * 処理: ドレミの歌を流す
+ * 返り血: なし
+ */
+void doremiSong () {
+    int longTone = 800;   // 伸ばす音[ms]
+    int shortTone = 300;  // 伸ばさない音[ms]
+
+    tone ( BZ, scale2f ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "re" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "do" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "do" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), longTone );
+    delay ( longTone + 150 );
+
+    tone ( BZ, scale2f ( "re" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "fa" ), shortTone );
+    delay ( shortTone + 20);
+    tone ( BZ, scale2f ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "re" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "fa" ), longTone );
+    delay ( longTone + 150 );
+
+    tone ( BZ, scale2f ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "so" ), longTone );
+    delay ( longTone + 150 );
+
+    tone ( BZ, scale2f ( "fa" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "so" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "ra" ), shortTone );
+    delay ( shortTone + 30);
+    tone ( BZ, scale2f ( "ra" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "so" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "ra" ), longTone );
+    delay ( longTone + 150 );
+
+    tone ( BZ, scale2f ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2f ( "do" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "re" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "so" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2f ( "ra" ), longTone );
+    delay ( longTone + 150 );
+
+
 }
 
 /**

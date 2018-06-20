@@ -15,6 +15,8 @@ void setup() {
 
     // ピンのモード設定
     pinMode(LED, OUTPUT);
+
+    Serial.begin ( 9600 );
 }
 
 /**
@@ -27,6 +29,8 @@ void loop() {
     // put your main code here, to run repeatedly:
 
     int val = analogRead(CdS);  // A/D変換値
+    Serial.print ( "val: " );
+    Serial.println( val );
     analogWrite(LED, val / 4);  // A/D変換値の大きさに基づいてLED点灯
 
     delay(10);                  // 遅延[ms]

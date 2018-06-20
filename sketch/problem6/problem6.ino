@@ -18,7 +18,7 @@ void setup () {
 
 int count = 5;       // 測定回数
 int bf = 1000;       // 基準周波数
-float set_d = 50.0;  // ブザーを鳴らす距離[cm]
+float set_d = 20.0;  // ブザーを鳴らす距離[cm]
 
 /**
  * 関数名: loop
@@ -30,6 +30,7 @@ void loop () {
     // put your main code here, to run repeatedly:
 
    float  ain = 0;  // A/D変換値，平均値
+   int toneFlag = 0;    // tone関数実行フラグ
 
     // 平均A/D変換値を出すため，総和する
     for ( int i = 0; i < count; i++ ) {
@@ -37,13 +38,20 @@ void loop () {
     }
     ain = ain / count;                       // 平均A/D変換値
 
-    float dcm = ( 6787 / ( ain - 3 ) ) - 4;  // 距離[cm]
+    float dcm = ( 6787.0 / ( ain - 3.0 ) ) - 4.0;  // 距離[cm]
 
     // 設定した距離より近くに障害物がある場合
     if ( dcm < set_d ) {
-        tone ( BZ, 1000.0 / dcm );           // 音鳴らす
+
+        // tone関数が複数回実行されるのを防ぐ
+        if ( !toneFlag ) {
+            float f = 5000.0 / dcm;
+            tone ( BZ, f );       // 音鳴らす
+            toneFlag = 1;                    // フラグを立てる
+        }
     } else {
         noTone ( BZ );                       // 音消す
+        toneFlag = 0;                        // フラグを下ろす
     }
 
     // 表示

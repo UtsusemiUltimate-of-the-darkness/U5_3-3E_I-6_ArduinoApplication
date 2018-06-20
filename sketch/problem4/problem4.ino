@@ -41,7 +41,7 @@ void loop () {
         if ( 0 <= (inputTime - 0x30) || (inputTime - 0x30) <= 9 ) {
             // 表示
             Serial.print ( (inputTime - 0x30) );
-            Serial.print( " 秒待機");
+            Serial.println ( " 秒待機");
 
             delay ( (inputTime - 0x30) * 1000 );  // 入力された時間待機[sec]
             tone ( BZ, f, playTime );             // 音再生

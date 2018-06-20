@@ -26,19 +26,26 @@ int count = 5;  // 測定回数
 void loop () {
     // put your main code here, to run repeatedly:
 
-    int ain = 0;  // A/D変換値
+    float ain = 0;  // A/D変換値
 
     // 平均A/D変換値を出すため，総和する
     for ( int i = 0; i < count; i++ ) {
         ain += analogRead ( SH_2Y0A21 );
     }
     ain = ain / count;                       // 平均A/D変換値
+    // float Vin = ain * 5.0 / 1024.0;          // 電圧煮直す[V]
 
-    float dcm = ( 6787 / ( ain - 3 ) ) - 4;  // 距離[cm]
+    float dcm = ( 6787.0 / ( ain - 3.0 ) ) - 4.0;  // 距離[cm]
 
     // 表示
+    Serial.print ( "ain: " );
+    Serial.println ( ain );
+    Serial.print ( "平均距離: " );
     Serial.print ( dcm );                    // 開業しない
     Serial.println ( " cm" );                // 開業する
+    Serial.println ( "" );
+
+
 
     delay ( 1000 );                          // 遅延
 }
