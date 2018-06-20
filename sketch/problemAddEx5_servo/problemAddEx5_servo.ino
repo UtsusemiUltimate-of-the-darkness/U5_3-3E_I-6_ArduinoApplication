@@ -4,7 +4,7 @@
 
 // defineはコンパイル時にマクロ変換される
 #define SERVO 9  // サーボモータ接続ピン
-Servo servo1;    // よくわからん．テキストコメント書けー
+Servo servo1;    // 操作するサーボモータ
 
 /**
  * 関数名: setup

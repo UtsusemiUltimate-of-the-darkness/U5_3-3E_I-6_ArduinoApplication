@@ -28,24 +28,23 @@ int playTime = 500;  // 再生している時間[ms]
  */
 void loop () {
     // put your main code here, to run repeatedly:
-    /**
-     * tone関数は3, 11番ピンの出力を妨げる
-     */
+    // tone関数は3, 11番ピンの出力を妨げる
 
-    inputTime = Serial.read ();  // シリアルモニタから入力を読み取る
+    inputTime = Serial.read ();           // シリアルモニタから入力を読み取る
 
     // 入力を読み取れた場合
     if ( inputTime != -1 ) {
+        int t = inputTime - 0x30;         // 入力した時間[sec]
 
-        // 1-9秒の範囲であるか
-        if ( 0 <= (inputTime - 0x30) || (inputTime - 0x30) <= 9 ) {
+        // 0-9秒の範囲であるか
+        if ( -1 < t && t < 10 ) {
             // 表示
-            Serial.print ( (inputTime - 0x30) );
-            Serial.print( " 秒待機");
+            Serial.print ( t );           // 入力した秒数
+            Serial.println ( " 秒待機" );  // 改行あり
 
-            delay ( (inputTime - 0x30) * 1000 );  // 入力された時間待機[sec]
-            tone ( BZ, f, playTime );             // 音再生
-            delay ( playTime );                   // 再生されている時間遅延[ms]
+            delay ( t * 1000 );           // 入力された時間待機[sec]
+            tone ( BZ, f, playTime );     // 音再生
+            delay ( playTime );           // 再生されている時間遅延[ms]
         }
     }
 }
