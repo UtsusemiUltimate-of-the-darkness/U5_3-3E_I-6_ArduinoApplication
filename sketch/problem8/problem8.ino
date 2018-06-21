@@ -6,7 +6,7 @@
 #include <Servo.h>  // サーボモータ用ライブラリ
 
 // defineはコンパイル時にマクロ変換される
-#define SH_2Y0A21 0  // アナログ測距センサ接続ピン
+#define SH_2Y0A21 0  // アナログ距離センサ接続ピン
 #define SERVO 9      // サーボモータ接続ピン
 Servo servo1;        // 操作するサーボモータ
 
@@ -23,7 +23,7 @@ void setup () {
     servo1.attach ( SERVO );  // サーボモータを接続したピンを使用
 }
 
-int count = 5;  // 測距センサ測定回数
+int count = 5;  // 距離センサ測定回数
 
 /**
  * 関数名: loop
@@ -44,17 +44,17 @@ void loop () {
     float dcm = ( 6787 / ( ain - 3 ) ) - 4;  // A/D変換値平均から距離に直す[cm]
 
     // 距離の表示
-    Serial.print ( "d: " );                  // 改行しない
-    Serial.print ( dcm );                    // 改行しない
-    Serial.print ( " cm " );                 // 改行しない
+    Serial.print ( "d: " );
+    Serial.print ( dcm );
+    Serial.print ( " cm " );
 
-    //
+    // 10-80cm以内に障害物があるか
     if ( 10 <= dcm && dcm < 80 ) {
 
         // 回転角の表示
-        Serial.print ( ", rot: ");           // 改行しない
-        Serial.print ( 2 * dcm );            // 改行しない
-        Serial.println ( " deg" );           // 改行する
+        Serial.print ( ", rot: ");
+        Serial.print ( 2 * dcm );
+        Serial.println ( " deg" );
 
         servo1.write ( 2 * dcm );            // サーボモーター2倍の距離[cm]度に回転[deg]
     }

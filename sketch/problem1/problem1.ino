@@ -13,7 +13,6 @@ void setup () {
     // put your setup code here, to run once:
 
     pinMode ( LED, OUTPUT );  // ピンのモード設定
-
     Serial.begin ( 9600 );    // シリアル通信の初期化
 }
 
@@ -40,7 +39,7 @@ void loop () {
             case 'B':
             case 'b':
                 count++;                           // count+1
-                Serial.println ( "LED: flash" );   // 表示(最後の文字の後に改行)
+                Serial.println ( "LED: flash" );   // 表示
 
                 // countの回数だけ点滅
                 for ( int i = 0; i < count; i++ ) {
@@ -54,7 +53,7 @@ void loop () {
             // "r"が入力された場合，カウントリセット
             case 'R':
             case 'r':
-                Serial.println ( "countReset" );   // 表示(最後の文字の後に改行)
+                Serial.println ( "countReset" );   // 表示
                 digitalWrite ( LED, HIGH );        // LED点灯
                 delay ( 800 );                     // LED点灯している時間[ms]
                 digitalWrite ( LED, LOW );         // LED消灯

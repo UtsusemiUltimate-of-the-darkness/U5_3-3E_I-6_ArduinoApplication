@@ -20,8 +20,8 @@ void setup () {
     Serial.begin ( 9600 );                        // シリアル通信の初期化
 
     // 再生内容を表示
-    Serial.println ( "救急車のサイレン" );           // 最後改行あり
-    Serial.println ( "pii: 960Hz, poo: 770Hz" );  // 最後改行あり
+    Serial.println ( "救急車のサイレン" );
+    Serial.println ( "pii: 960Hz, poo: 770Hz" );
 }
 
 int time_ms = 600;  // 音を鳴らす時間[ms]
@@ -38,7 +38,7 @@ void loop () {
 
     // サイレン鳴らす
     tone ( BZ, Pii, time_ms );  // 音再生
-    delay ( time_ms );          // 再生が終わるまで遅延
+    delay ( time_ms );          // 再生が終わるまで待機
     tone ( BZ, Poo, time_ms );  // 音再生
-    delay( time_ms );           // 再生が終わるまで遅延
+    delay( time_ms );           // 再生が終わるまで待機
 }

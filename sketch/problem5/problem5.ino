@@ -267,74 +267,75 @@ void doremiSong () {
  * 返り値: 周波数[Hz]
  */
 float scale2Hz ( String scale ) {
-    float f = 0.0;         // 周波数[Hz]
-    float baseHz = 440.0;  // 基準周波数("ラ"の周波数)[Hz]
+    float f = 0.0;              // 周波数[Hz]
+    float baseHz = 440.0;       // 基準周波数("ラ"の周波数)[Hz]
+    float octaveKeyNum = 12.0;  // 1オクターブの音階数
 
     // 音階から周波数を決定
     if ( scale == "fam1" || scale == "fm1" ) {
-        f = baseHz * pow ( 2.0, ( -16.0 / 12.0 ) );
+        f = baseHz * pow ( 2.0, ( -16.0 / octaveKeyNum ) );
     } else if ( scale == "fa#m1" || scale == "f#m1" ) {
-        f = baseHz * pow ( 2.0, -15.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -15.0 / octaveKeyNum );
     } else if ( scale == "som1" || scale == "gm1" ) {
-        f = baseHz * pow ( 2.0, -14.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -14.0 / octaveKeyNum );
     } else if ( scale == "so#m1" || scale == "g#m1" ) {
-        f = baseHz * pow ( 2.0, -13.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -13.0 / octaveKeyNum );
     } else if ( scale == "ram1" || scale == "am1" ) {
-        f = baseHz * pow ( 2.0, -12.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -12.0 / octaveKeyNum );
     } else if ( scale == "ra#m1" || scale == "a#m1" ) {
-        f = baseHz * pow ( 2.0, -11.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -11.0 / octaveKeyNum );
     } else if ( scale == "sim1" || scale == "bm1" ) {
-        f = baseHz * pow ( 2.0, -10.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -10.0 / octaveKeyNum );
     } else if ( scale == "do" || scale == "c" ) {
-        f = baseHz * pow ( 2.0, -9.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -9.0 / octaveKeyNum );
     } else if ( scale == "do#" || scale == "c#" ) {
-        f = baseHz * pow ( 2.0, -8.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -8.0 / octaveKeyNum );
     } else if ( scale == "re" || scale == "d" ) {
-        f = baseHz * pow ( 2.0, -7.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -7.0 / octaveKeyNum );
     } else if ( scale == "re#" || scale == "d#" ) {
-        f = baseHz * pow ( 2.0, -6.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -6.0 / octaveKeyNum );
     } else if ( scale == "mi" || scale == "e#" ) {
-        f = baseHz * pow ( 2.0, -5.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -5.0 / octaveKeyNum );
     } else if ( scale == "fa" || scale == "f" ) {
-        f = baseHz * pow ( 2.0, -4.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -4.0 / octaveKeyNum );
     } else if ( scale == "fa#" || scale == "f#" ) {
-        f = baseHz * pow ( 2.0, -3.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -3.0 / octaveKeyNum );
     } else if ( scale == "so" || scale == "g" ) {
-        f = baseHz * pow ( 2.0, -2.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -2.0 / octaveKeyNum );
     } else if ( scale == "so#" || scale == "g#" ) {
-        f = baseHz * pow ( 2.0, -1.0 / 12.0 );
+        f = baseHz * pow ( 2.0, -1.0 / octaveKeyNum );
     } else if ( scale == "ra" || scale == "a" ) {
-        f = baseHz * pow ( 2.0, 0.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 0.0 / octaveKeyNum );
     } else if ( scale == "ra#" || scale == "a#" ) {
-        f = baseHz * pow ( 2.0, 1.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 1.0 / octaveKeyNum );
     } else if ( scale == "si" || scale == "b" ) {
-        f = baseHz * pow ( 2.0, 2.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 2.0 / octaveKeyNum );
     } else if ( scale == "dop1" || scale == "cp1" ) {
-        f = baseHz * pow ( 2.0, 3.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 3.0 / octaveKeyNum );
     } else if ( scale == "do#p1" || scale == "c#p1" ) {
-        f = baseHz * pow ( 2.0, 4.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 4.0 / octaveKeyNum );
     } else if ( scale == "rep1" || scale == "dp1" ) {
-        f = baseHz * pow ( 2.0, 5.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 5.0 / octaveKeyNum );
     } else if ( scale == "re#p1" || scale == "d#p1" ) {
-        f = baseHz * pow ( 2.0, 6.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 6.0 / octaveKeyNum );
     } else if ( scale == "mip1" || scale == "ep1" ) {
-        f = baseHz * pow ( 2.0, 7.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 7.0 / octaveKeyNum );
     } else if ( scale == "fap1" || scale == "fp1" ) {
-        f = baseHz * pow ( 2.0, 8.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 8.0 / octaveKeyNum );
     } else if ( scale == "fa#p1" || scale == "f#p1" ) {
-        f = baseHz * pow ( 2.0, 9.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 9.0 / octaveKeyNum );
     } else if ( scale == "sop1" || scale == "gp1" ) {
-        f = baseHz * pow ( 2.0, 10.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 10.0 / octaveKeyNum );
     } else if ( scale == "so#p1" || scale == "g#p1" ) {
-        f = baseHz * pow ( 2.0, 11.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 11.0 / octaveKeyNum );
     } else if ( scale == "rap1" || scale == "ap1" ) {
-        f = baseHz * pow ( 2.0, 12.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 12.0 / octaveKeyNum );
     } else if ( scale == "ra#p1" || scale == "a#p1" ) {
-        f = baseHz * pow ( 2.0, 13.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 13.0 / octaveKeyNum );
     } else if ( scale == "sip1" || scale == "bp1" ) {
-        f = baseHz * pow ( 2.0, 14.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 14.0 / octaveKeyNum );
     } else if ( scale == "dop2" || scale == "cp2" ) {
-        f = baseHz * pow ( 2.0, 15.0 / 12.0 );
+        f = baseHz * pow ( 2.0, 15.0 / octaveKeyNum );
     }
 
     return f;  // 周波数を返す[Hz]

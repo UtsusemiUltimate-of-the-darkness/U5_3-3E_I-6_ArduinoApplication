@@ -30,7 +30,6 @@ void loop () {
     // put your main code here, to run repeatedly:
 
    float ain = 0;       // A/D変換値，平均値
-   int flagTone = 0;    // tone関数実行フラグ
 
     // 平均A/D変換値を出すため，総和する
     for ( int i = 0; i < count; i++ ) {
@@ -43,15 +42,13 @@ void loop () {
     // 設定した距離より近くに障害物がある場合
     if ( dcm < set_d ) {
 
-        // tone関数が複数回実行されるのを防ぐ
-        if ( !flagTone ) {
-            float f = bf / dcm;                    // 周波数決定
-            tone ( BZ, f );                        // 音鳴らす
-            flagTone = 1;                          // フラグを立てる
-        }
+        float f = bf / dcm;                        // 周波数決定
+        noTone ( BZ );                             // tone関数が複数回実行されるのを防ぐため，音止める
+        tone ( BZ, f );                            // 音鳴らす
+
     } else {
+
         noTone ( BZ );                             // 音消す
-        flagTone = 0;                              // フラグを下ろす
     }
 
     // 表示
