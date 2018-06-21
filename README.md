@@ -18,3 +18,6 @@
 
 <h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.0.0">ver_2.0.0</a></h4>
 「problemAddEx6_LCD」，「problemAddEx6_decCounter」，「vr_R」以外動作確認済み．<br>
+
+<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.0">ver_2.1.0</a></h4>
+スケッチの最適化とコメントの整理，追記<br>
