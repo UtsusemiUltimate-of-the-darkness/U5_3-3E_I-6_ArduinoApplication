@@ -36,3 +36,7 @@
         コメント文の修正
     </li>
 </ul>
+
+<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.1">ver_2.1.1</a></h4>
+「.DS_store」削除版です．<br>
+その他ファイル内容に変更ありません．<br>
