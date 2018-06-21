@@ -51,9 +51,9 @@ void loop () {
         noTone ( BZ );                             // 音消す
     }
 
-    // 表示
-    Serial.print ( dcm );                          // 改行しない
-    Serial.println ( " cm" );                      // 改行する
+    // 障害物までの距離を表示
+    Serial.print ( dcm );
+    Serial.println ( " cm" );
 
     delay ( 200 );                                 // 遅延[ms]
 }
