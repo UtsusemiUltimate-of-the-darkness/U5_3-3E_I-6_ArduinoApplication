@@ -109,7 +109,7 @@ void doremiSong () {
 
     /**
      * レーミファファミレファー
-     * レーはレ  モ  ンのレー
+     * レーは レ モ ンの レー
      */
     // tone ( BZ, scale2Hz ( "re" ), longTone );
     // delay ( longTone );
@@ -128,7 +128,7 @@ void doremiSong () {
 
     /**
      * ミーファソーミソーミーソー
-     * ミーは  みーんなーのーミー
+     * ミー は みーんなーのーミー
      */
     // tone ( BZ, scale2Hz ( "mi" ), longTone );
     // delay ( longTone );
@@ -146,8 +146,8 @@ void doremiSong () {
     // delay ( fewLongTone );
 
     /**
-     * ファーソラ  ラソファラー
-     * ファーはファイトの  ファー
+     * ファーソ ラ ラソファ ラー
+     * ファーはファイト の ファー
      */
     // tone ( BZ, scale2Hz ( "fa" ), longTone );
     // delay ( longTone );
@@ -166,7 +166,7 @@ void doremiSong () {
 
     /**
      * ソードレミファソラー
-     * ソーはあおい  そらー
+     * ソーはあお い そらー
      */
     tone ( BZ, scale2Hz ( "so" ), longTone );
     delay ( longTone );
