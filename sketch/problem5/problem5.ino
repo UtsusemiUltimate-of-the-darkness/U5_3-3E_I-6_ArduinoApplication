@@ -88,6 +88,10 @@ void doremiSong () {
     int fewLongTone = 1000;   // 少し長い音
     int veryLongTone  = 1300;  // 長い音
 
+    /**
+     * ドーレミードミードーミー
+     * ドーはドーナツーのードー
+     */
     // tone ( BZ, scale2Hz ( "do" ), longTone );
     // delay ( longTone );
     // tone ( BZ, scale2Hz ( "re" ), shortTone );
@@ -102,7 +106,11 @@ void doremiSong () {
     // delay ( longTone - 200 );
     // tone ( BZ, scale2Hz ( "mi" ), longTone );
     // delay ( longTone + 300 );
-    //
+
+    /**
+     * レーミファファミレファー
+     * レーはレ  モ  ンのレー
+     */
     // tone ( BZ, scale2Hz ( "re" ), longTone );
     // delay ( longTone );
     // tone ( BZ, scale2Hz ( "mi" ), shortTone );
@@ -117,7 +125,11 @@ void doremiSong () {
     // delay ( shortTone - 10 );
     // tone ( BZ, scale2Hz ( "fa" ), veryLongTone );
     // delay ( 2 * fewLongTone );
-    //
+
+    /**
+     * ミーファソーミソーミーソー
+     * ミーは  みーんなーのーミー
+     */
     // tone ( BZ, scale2Hz ( "mi" ), longTone );
     // delay ( longTone );
     // tone ( BZ, scale2Hz ( "fa" ), shortTone );
@@ -132,7 +144,11 @@ void doremiSong () {
     // delay ( middleTone );
     // tone ( BZ, scale2Hz ( "so" ), longTone );
     // delay ( fewLongTone );
-    //
+
+    /**
+     * ファーソラ  ラソファラー
+     * ファーはファイトの  ファー
+     */
     // tone ( BZ, scale2Hz ( "fa" ), longTone );
     // delay ( longTone );
     // tone ( BZ, scale2Hz ( "so" ), shortTone );
@@ -148,6 +164,10 @@ void doremiSong () {
     // tone ( BZ, scale2Hz ( "ra" ), veryLongTone );
     // delay ( 2 * fewLongTone );
 
+    /**
+     * ソードレミファソラー
+     * ソーはあおい  そらー
+     */
     tone ( BZ, scale2Hz ( "so" ), longTone );
     delay ( longTone );
     tone ( BZ, scale2Hz ( "do" ), fewShortTone );
