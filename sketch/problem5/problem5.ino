@@ -79,6 +79,8 @@ void tyarumera () {
  * 返り血: なし
  */
 void doremiSong () {
+
+    // 音の長さを格納する変数
     int veryShortTone = 230;  // とても短い音[ms]
     int fewShortTone = 260;   // 少し短い音
     int shortTone = 280;      // 短い音[ms]
@@ -88,85 +90,86 @@ void doremiSong () {
     int fewLongTone = 1000;   // 少し長い音
     int veryLongTone  = 1300;  // 長い音
 
+    // 再生される音たち
     /**
-     * ドーレミードミードーミー
-     * ドーはドーナツーのードー
+     * 音階: ドーレミードミードーミー
+     * 歌詞: ドーはドーナツーのードー
      */
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "re" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "mi" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "mi" ), middleTone );
-    // delay ( longTone - 200 );
-    // tone ( BZ, scale2Hz ( "do" ), middleTone );
-    // delay ( longTone - 200 );
-    // tone ( BZ, scale2Hz ( "mi" ), longTone );
-    // delay ( longTone + 300 );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "re" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "mi" ), middleTone );
+    delay ( longTone - 200 );
+    tone ( BZ, scale2Hz ( "do" ), middleTone );
+    delay ( longTone - 200 );
+    tone ( BZ, scale2Hz ( "mi" ), longTone );
+    delay ( longTone + 300 );
 
     /**
-     * レーミファファミレファー
-     * レーは レ モ ンの レー
+     * 音階: レーミファファミレファー
+     * 歌詞: レーは レ モ ンの レー
      */
-    // tone ( BZ, scale2Hz ( "re" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "mi" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "fa" ), fewShortTone );
-    // delay ( shortTone - 15 );
-    // tone ( BZ, scale2Hz ( "fa" ), fewShortTone );
-    // delay ( fewShortTone );
-    // tone ( BZ, scale2Hz ( "mi" ), shortTone - 10 );
-    // delay ( shortTone - 10 );
-    // tone ( BZ, scale2Hz ( "re" ), shortTone - 10 );
-    // delay ( shortTone - 10 );
-    // tone ( BZ, scale2Hz ( "fa" ), veryLongTone );
-    // delay ( 2 * fewLongTone );
+    tone ( BZ, scale2Hz ( "re" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "fa" ), fewShortTone );
+    delay ( shortTone - 15 );
+    tone ( BZ, scale2Hz ( "fa" ), fewShortTone );
+    delay ( fewShortTone );
+    tone ( BZ, scale2Hz ( "mi" ), shortTone - 10 );
+    delay ( shortTone - 10 );
+    tone ( BZ, scale2Hz ( "re" ), shortTone - 10 );
+    delay ( shortTone - 10 );
+    tone ( BZ, scale2Hz ( "fa" ), veryLongTone );
+    delay ( 2 * fewLongTone );
 
     /**
-     * ミーファソーミソーミーソー
-     * ミー は みーんなーのーミー
+     * 音階: ミーファソーミソーミーソー
+     * 歌詞: ミー は みーんなーのーミー
      */
-    // tone ( BZ, scale2Hz ( "mi" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "fa" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "so" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "mi" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "so" ), middleTone );
-    // delay ( middleTone );
-    // tone ( BZ, scale2Hz ( "mi" ), middleTone );
-    // delay ( middleTone );
-    // tone ( BZ, scale2Hz ( "so" ), longTone );
-    // delay ( fewLongTone );
+    tone ( BZ, scale2Hz ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "so" ), middleTone );
+    delay ( middleTone );
+    tone ( BZ, scale2Hz ( "mi" ), middleTone );
+    delay ( middleTone );
+    tone ( BZ, scale2Hz ( "so" ), longTone );
+    delay ( fewLongTone );
 
     /**
-     * ファーソ ラ ラソファ ラー
-     * ファーはファイト の ファー
+     * 音階: ファーソ ラ ラソファ ラー
+     * 歌詞: ファーはファイト の ファー
      */
-    // tone ( BZ, scale2Hz ( "fa" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "so" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "ra" ), fewShortTone );
-    // delay ( shortTone - 15 );
-    // tone ( BZ, scale2Hz ( "ra" ), fewShortTone );
-    // delay ( fewShortTone );
-    // tone ( BZ, scale2Hz ( "so" ), shortTone - 10 );
-    // delay ( shortTone - 10 );
-    // tone ( BZ, scale2Hz ( "fa" ), shortTone - 10 );
-    // delay ( shortTone - 10 );
-    // tone ( BZ, scale2Hz ( "ra" ), veryLongTone );
-    // delay ( 2 * fewLongTone );
+    tone ( BZ, scale2Hz ( "fa" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "so" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "ra" ), fewShortTone );
+    delay ( shortTone - 15 );
+    tone ( BZ, scale2Hz ( "ra" ), fewShortTone );
+    delay ( fewShortTone );
+    tone ( BZ, scale2Hz ( "so" ), shortTone - 10 );
+    delay ( shortTone - 10 );
+    tone ( BZ, scale2Hz ( "fa" ), shortTone - 10 );
+    delay ( shortTone - 10 );
+    tone ( BZ, scale2Hz ( "ra" ), veryLongTone );
+    delay ( 2 * fewLongTone );
 
     /**
-     * ソードレミファソラー
-     * ソーはあお い そらー
+     * 音階: ソードレミファソラー
+     * 歌詞: ソーはあお い そらー
      */
     tone ( BZ, scale2Hz ( "so" ), longTone );
     delay ( longTone );
@@ -183,7 +186,7 @@ void doremiSong () {
     tone ( BZ, scale2Hz ( "ra" ), veryLongTone );
     delay ( 2 * fewLongTone );
 
-// ここから
+// ここからエディット
     tone ( BZ, scale2Hz ( "ra" ), longTone );
     delay ( longTone );
     tone ( BZ, scale2Hz ( "re" ), shortTone );
@@ -214,75 +217,75 @@ void doremiSong () {
     tone ( BZ, scale2Hz ( "do" ), veryLongTone );
     delay ( 2 * veryLongTone );
 
-    // tone ( BZ, scale2Hz ( "do" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "si" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "ra" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "fa" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "si" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "so" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone + 150);
-    //
-    // tone ( BZ, scale2Hz ( "do" ), veryShortTone );
-    // delay ( veryShortTone );
-    // tone ( BZ, scale2Hz ( "mi" ), veryShortTone );
-    // delay ( veryShortTone + 50 );
-    // tone ( BZ, scale2Hz ( "mi" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "mi" ), veryShortTone );
-    // delay ( veryShortTone );
-    // tone ( BZ, scale2Hz ( "so" ), veryShortTone );
-    // delay ( veryShortTone + 50 );
-    // tone ( BZ, scale2Hz ( "so" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "re" ), veryShortTone );
-    // delay ( veryShortTone );
-    // tone ( BZ, scale2Hz ( "fa" ), veryShortTone );
-    // delay ( veryShortTone + 50 );
-    // tone ( BZ, scale2Hz ( "fa" ), shortTone );
-    // delay ( shortTone );
-    // tone ( BZ, scale2Hz ( "ra" ), veryShortTone );
-    // delay ( veryShortTone );
-    // tone ( BZ, scale2Hz ( "si" ), veryShortTone );
-    // delay ( veryShortTone + 50);
-    // tone ( BZ, scale2Hz ( "si" ), shortTone );
-    // delay ( shortTone + 100 );
-    //
-    // tone ( BZ, scale2Hz ( "so" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "ra" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "fa" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "mi" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "re" ), longTone );
-    // delay ( longTone + 200);
-    //
-    // tone ( BZ, scale2Hz ( "so" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "ra" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "si" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "re" ), longTone );
-    // delay ( longTone );
-    // tone ( BZ, scale2Hz ( "do" ), fewLongTone );
-    // delay ( fewLongTone );
+    tone ( BZ, scale2Hz ( "do" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "si" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "ra" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "fa" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "si" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone + 150);
+
+    tone ( BZ, scale2Hz ( "do" ), veryShortTone );
+    delay ( veryShortTone );
+    tone ( BZ, scale2Hz ( "mi" ), veryShortTone );
+    delay ( veryShortTone + 50 );
+    tone ( BZ, scale2Hz ( "mi" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "mi" ), veryShortTone );
+    delay ( veryShortTone );
+    tone ( BZ, scale2Hz ( "so" ), veryShortTone );
+    delay ( veryShortTone + 50 );
+    tone ( BZ, scale2Hz ( "so" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "re" ), veryShortTone );
+    delay ( veryShortTone );
+    tone ( BZ, scale2Hz ( "fa" ), veryShortTone );
+    delay ( veryShortTone + 50 );
+    tone ( BZ, scale2Hz ( "fa" ), shortTone );
+    delay ( shortTone );
+    tone ( BZ, scale2Hz ( "ra" ), veryShortTone );
+    delay ( veryShortTone );
+    tone ( BZ, scale2Hz ( "si" ), veryShortTone );
+    delay ( veryShortTone + 50);
+    tone ( BZ, scale2Hz ( "si" ), shortTone );
+    delay ( shortTone + 100 );
+
+    tone ( BZ, scale2Hz ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "ra" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "fa" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "mi" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "re" ), longTone );
+    delay ( longTone + 200);
+
+    tone ( BZ, scale2Hz ( "so" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "ra" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "si" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "re" ), longTone );
+    delay ( longTone );
+    tone ( BZ, scale2Hz ( "do" ), fewLongTone );
+    delay ( fewLongTone );
 }
 
 /**
