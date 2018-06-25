@@ -4,7 +4,7 @@
 
 #include <LiquidCrystal.h>  // LCD用ライブラリ
 
-//LCDモジュールの配線(rs, rw, enable, d4, d5, d6, d7)
+// LCDモジュールの配線(rs, rw, enable, d4, d5, d6, d7)
 LiquidCrystal lcd = LiquidCrystal ( 12, 11, 10, 5, 4, 3, 2 );
 
 /**

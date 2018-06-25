@@ -12,8 +12,7 @@
 void setup () {
     // put your setup code here, to run once:
 
-    pinMode ( LED, OUTPUT );  // ピンのモード設定
-
+    pinMode ( LED, OUTPUT );  // ピンモード設定
     Serial.begin ( 9600 );    // シリアル通信の初期化
 }
 
@@ -34,15 +33,15 @@ void loop () {
         // 入力された文字によりLEDの点灯を切り替え
         switch ( inputChar ) {
             // "o"が入力された場合
-            case 'o':
             case 'O':
+            case 'o':
                 Serial.println ( "LED: ON" );      // 表示(最後の文字の後に改行)
                 digitalWrite ( LED, HIGH );        // LED点灯
                 break;                             // Switch文終了
 
             // "p"が入力された場合
-           case 'p':
            case 'P':
+           case 'p':
                 Serial.println ( "LED: OFF" );     // 表示(最後の文字の後に改行)
                 digitalWrite ( LED, LOW );         // LED消灯
                 break;                             // Switch文終了

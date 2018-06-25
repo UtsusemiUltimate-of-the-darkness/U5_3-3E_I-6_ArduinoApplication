@@ -46,13 +46,13 @@ void loop () {
     // 距離の表示
     Serial.print ( "d: " );
     Serial.print ( dcm );
-    Serial.print ( " cm " );
+    Serial.print ( " cm" );
 
     // 10-80cm以内に障害物があるか
     if ( 10 <= dcm && dcm < 80 ) {
 
         // 回転角の表示
-        Serial.print ( ", rot: ");
+        Serial.print ( " , rot: " );
         Serial.print ( 2 * dcm );
         Serial.println ( " deg" );
 

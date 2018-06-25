@@ -45,4 +45,14 @@
 マージ不能のため新ブランチ作成
 
 <h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.2.0">ver_2.2.0</a></h4>
-ドレミの歌が正常に再生されないバグを修正中<br>
+<ul>
+    <li>
+        ドレミの歌が正常に再生されないバグを修正中
+    </li>
+    <li>
+        スケッチの最適化
+    </li>
+    <li>
+        コメントの追記
+    </li>
+</ul>

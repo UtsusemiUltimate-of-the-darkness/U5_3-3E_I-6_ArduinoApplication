@@ -1,8 +1,8 @@
 // 例題3: CdSにかかる電圧によってLEDの明るさ変化
 
 // defineはコンパイル時にマクロ変換される
-#define LED 9   // LED接続ピン
-#define CdS 0   // CdS接続ピン(アナログ)
+#define LED 9  // LED接続ピン
+#define CdS 0  // CdS接続ピン(アナログ)
 
 /**
  * 関数名: setup

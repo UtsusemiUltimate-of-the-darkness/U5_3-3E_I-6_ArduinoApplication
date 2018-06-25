@@ -54,10 +54,10 @@ void loop () {
             case 'R':
             case 'r':
                 Serial.println ( "countReset" );   // 表示
+                count = 0;                         // カウントリセット
                 digitalWrite ( LED, HIGH );        // LED点灯
                 delay ( 800 );                     // LED点灯している時間[ms]
                 digitalWrite ( LED, LOW );         // LED消灯
-                count = 0;                         // カウントリセット
                 break;                             // Switch文終了
 
             // 上記以外

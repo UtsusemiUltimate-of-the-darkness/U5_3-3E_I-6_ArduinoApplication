@@ -16,8 +16,7 @@ void setup () {
     Serial.begin ( 9600 );   // シリアル通信の初期化
 }
 
-int inputTime;       // 入力された時間を格納
-float f = 440.0;     // 再生する周波数[Hz]
+int f = 440;     // 再生する周波数[Hz]
 int playTime = 500;  // 再生している時間[ms]
 
 /**
@@ -30,7 +29,7 @@ void loop () {
     // put your main code here, to run repeatedly:
     // tone関数は3, 11番ピンの出力を妨げる
 
-    inputTime = Serial.read ();           // シリアルモニタから入力を読み取る
+    int inputTime = Serial.read ();           // シリアルモニタから入力を読み取る
 
     // 入力を読み取れた場合
     if ( inputTime != -1 ) {
