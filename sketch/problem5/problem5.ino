@@ -28,8 +28,8 @@ void loop () {
     // put your main code here, to run repeatedly:
     // tone関数は3, 11番ピンの出力を妨げる
 
-    // tyarumera ();    // チャルメラ再生関数
-    // delay ( 3000 );  // 次の歌の間
+    tyarumera ();    // チャルメラ再生関数
+    delay ( 3000 );  // 次の歌の間
     doremiSong ();   // ドレミの歌再生関数
     delay ( 2000 );  // 次の歌の間
 }
@@ -44,9 +44,9 @@ void tyarumera () {
     // tone関数は3, 11番ピンの出力を妨げる
 
     // 音の長さを格納する変数
-    int shortTone = 150;      // 短い音[ms]
-    int middleTone = 300;     // 中間長の音[ms]
-    int longTone = 800;       // 長い音[ms]
+    int shortTone    = 150;   // 短い音[ms]
+    int middleTone   = 300;   // 中間長の音[ms]
+    int longTone     = 800;   // 長い音[ms]
     int veryLongTone = 1000;  // とても長い音[ms]
 
     // 同メロディ2回
@@ -81,14 +81,13 @@ void tyarumera () {
 void doremiSong () {
 
     // 音の長さを格納する変数
-    int veryShortTone = 230;  // とても短い音[ms]
-    int fewShortTone = 260;   // 少し短い音
-    int shortTone = 280;      // 短い音[ms]
-    int middleTone = 500;     // 中間長の音[ms]
-    int longTone = 700;       // 長い音[ms] vlt, flt, vlt
-    // int veryLongTone = 1000;  // とても長い音[ms]
-    int fewLongTone = 1000;   // 少し長い音
-    int veryLongTone  = 1300;  // 長い音
+    int veryShortTone = 230;   // とても短い音[ms]
+    int fewShortTone  = 260;   // 少し短い音[ms]
+    int shortTone     = 280;   // 短い音[ms]
+    int middleTone    = 500;   // 中間長の音[ms]
+    int longTone      = 700;   // 長い音[ms]
+    int fewLongTone   = 1000;  // 少し長い音[ms]
+    int veryLongTone  = 1300;  // とても長い音[ms]
 
     // 再生される音たち
     /**
