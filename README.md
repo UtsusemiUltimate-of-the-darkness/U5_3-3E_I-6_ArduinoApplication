@@ -70,7 +70,7 @@
     測距センサを使って障害物までの距離を測定しよう．
   </li>
   <li>
-    <a href="https://github.com/UtusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/blob/master/sketch/problemAddEx5_servo/problemAddEx5_servo.ino"problemAddEx5_servo</a><br>
+    <a href="https://github.com/UtusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/blob/master/sketch/problemAddEx5_servo/problemAddEx5_servo.ino">problemAddEx5_servo</a><br>
     サーボモーター利用方法<br>
     サーボモーターを使ってみよう．
   </li>
@@ -98,29 +98,33 @@
     <a href="https://github.com/UtusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/blob/master/sketch/vr-R/vr-R.ino">vr-R</a><br>
     可変抵抗を用いてAD変換値を確認する．
   </li>
-</ul
-
-<h3>バージョン情報</h3>
-<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.0">ver_1.0.0</a></h4>
-実験前の予習．「たぶん動くだろう」という恐ろしい考えでテキトーに描きました．<br>
-ファイル内のex1〜problem5までは動作確認済み．<br>
-
-<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.1">ver_1.0.1</a></h4>
-「.DS_store」削除版です．<br>
-その他中身は変わりありません．<br>
-
-<h4><a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.0.0">ver_2.0.0</a></h4>
-「problemAddEx6_LCD」，「problemAddEx6_decCounter」，「vr_R」以外動作確認済み．<br>
-<ul>
-    <li>
-        スケッチのバグの修正
-    </li>
-    <li>
-        コメント文の修正と追記
-    </li>
 </ul>
 
+### バージョン情報
+
 <ul>
+  <li>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.0">ver_1.0.0</a><br>
+    実験前の予習．「たぶん動くだろう」という恐ろしい考えでテキトーに描きました．<br>
+    ファイル内のex1〜problem5までは動作確認済み．
+  </li>
+  <li>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_1.0.1">ver_1.0.1</a><br>
+    「.DS_store」削除版です．<br>
+    その他中身は変わりありません．
+  </li>
+  <li>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.0.0">ver_2.0.0</a><br>
+    「problemAddEx6_LCD」，「problemAddEx6_decCounter」，「vr_R」以外動作確認済み．
+    <ul>
+        <li>
+            スケッチのバグの修正
+        </li>
+        <li>
+            コメント文の修正と追記
+        </li>
+    </ul>
+  </li>
   <li>
     <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.0">ver_2.1.0</a>
     <ul>
@@ -133,12 +137,12 @@
     </ul>
   </li>
   <li>
-    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.1">ver_2.1.1</a>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.1">ver_2.1.1</a><br>
     「.DS_store」削除版です．<br>
     その他ファイル内容に変更ありません．
   </li>
   <li>
-    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.2">ver_2.1.2</a>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.1.2">ver_2.1.2</a><br>
     マージ不能のため新ブランチ作成
   </li>
   <li>
