@@ -160,7 +160,7 @@
     </ul>
   </li>
   <li>
-    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.2.1">ver_2.2.1</a>
+    <a href="https://github.com/UtsusemiUltimate-of-the-darkness/U5_3-3E_I-6_ArduinoApplication/tree/ver_2.2.1">ver_2.2.1</a><br>
     README.mdにファイルリストを追記
   </li>
 </ul>
